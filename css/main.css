@@ -27,3 +27,21 @@ time {
   display: block;
   font-family: monospace;
 }
+
+.wifi-icon {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: radial-gradient(circle 50px at 100% 100%, transparent 20px, #999 21px, #999 30px, transparent 31px, transparent 40px, #999 41px, #999 50px, transparent 51px);
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.wifi-icon:before {
+  content: ""; display: block; position: absolute;
+  bottom: -2px; right: -2px;
+  border-radius: 20px;
+  width: 12px; height: 12px;
+  background: #999;
+}

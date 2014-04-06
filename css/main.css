@@ -14,12 +14,22 @@ body {
 body, input, textarea {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.3;
+  color: #333;
 }
 
 .main-wrapper {
   padding: 10px;
   max-width: 400px;
   margin: auto;
+  text-align: center;
+}
+
+.livefeed {
+  text-align: left;
+}
+
+.title {
+  font-size: 20px;
 }
 
 time {
@@ -29,12 +39,12 @@ time {
 }
 
 .wifi-icon {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg) scale(0.7, 0.7);
+  transform: rotate(45deg) scale(0.7, 0.7);
   background: radial-gradient(circle 50px at 100% 100%, transparent 20px, #999 21px, #999 30px, transparent 31px, transparent 40px, #999 41px, #999 50px, transparent 51px);
   width: 50px;
   height: 50px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   position: relative;
 }
 

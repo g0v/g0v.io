@@ -30,7 +30,11 @@ a {
   padding: 15px;
 }
 
-h4 { margin-top: 0; }
+.livefeed p, .eforum p {
+  margin-bottom: 0;
+}
+
+h4 { margin-top: 0; font-size: 16px; margin-bottom: 0; }
 
 .title {
   font-size: 16px;
@@ -55,6 +59,7 @@ time {
   height: 50px;
   display: inline-block;
   margin-top: -10px;
+  margin-bottom: -5px;
 }
 
 .wifi-icon:before {
@@ -95,6 +100,11 @@ time {
 .thumbnail {
   float: left;
   margin: 0 10px 10px 0;
+  border-radius: 2px;
+}
+
+.logo {
+  border-radius: 2px; margin-bottom: -2px;
 }
 
 .links {

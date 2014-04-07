@@ -6,7 +6,6 @@ $(document).ready(function() {
   $.getJSON(forum_url, function(data){
     news = $.map(data.entry, function(entry){ return entry }).slice(0, 2)
     $.each(news, function(_, news) {
-      console.log(news)
       time = new Date(news.published)
       date_string = addZeros(time.getMonth() + 1) + '/' + addZeros(time.getDate())
       time_string = addZeros(time.getHours()) + ':' + addZeros(time.getMinutes())
@@ -22,10 +21,8 @@ $(document).ready(function() {
   $.getJSON(feed_url, function(data){
     news = data.slice(data.length - 5, data.length)
     $.each(news, function(_, news) {
-      time = new Date(news.time)
-      date_string = addZeros(time.getMonth() + 1) + '/' + addZeros(time.getDate())
-      time_string = addZeros(time.getHours()) + ':' + addZeros(time.getMinutes())
-      $('.livefeed h4').after('<p><time>' + date_string + ' ' + time_string + '</time> ' + news.msg + '</p>')
+      datetime_string = news.time.replace(/^\d+-|:\d+$/g, '')
+      $('.livefeed h4').after('<p><time>' + datetime_string + '</time> ' + news.msg + '</p>')
     })
   })
 

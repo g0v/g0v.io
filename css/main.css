@@ -5,10 +5,10 @@
 }
 
 body {
-  background: #fff;
-  padding: 15px;
+  background: #f9f9f9;
+  padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body, input, textarea {
@@ -23,19 +23,18 @@ a {
   font-weight: bold;
 }
 
-.main-wrapper {
-  padding: 10px;
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
-}
-
-.livefeed {
+.livefeed, .eforum {
   text-align: left;
+  margin: 15px 0;
+  border-top: 1px solid #e9e9e9;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 16px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 0 0;
 }
 
 .description {
@@ -46,35 +45,66 @@ a {
 time {
   color: #777;
   display: block;
+  font-size: 12px;
   font-family: monospace;
 }
 
 .wifi-icon {
-  -webkit-transform: rotate(45deg) scale(0.7, 0.7);
-  transform: rotate(45deg) scale(0.7, 0.7);
+  -webkit-transform: rotate(45deg) scale(0.5, 0.5);
+  transform: rotate(45deg) scale(0.5, 0.5);
   background: radial-gradient(circle 50px at 100% 100%, transparent 20px, #999 21px, #999 30px, transparent 31px, transparent 40px, #999 41px, #999 50px, transparent 51px);
   width: 50px;
   height: 50px;
-  margin: 0 auto 20px;
-  position: relative;
+  display: inline-block;
+  margin-top: -10px;
+  margin-right: 10px;
 }
 
 .wifi-icon:before {
-  content: ""; display: block; position: absolute;
+  content: ""; display: inline-block; position: absolute;
   bottom: -2px; right: -2px;
   border-radius: 20px;
   width: 12px; height: 12px;
   background: #999;
 }
 
+.header {
+  height: 32px;
+}
+
+.header,
 .footer {
-  display: none; /*  Temporary  */
+  text-align: center;
+  font-size: 11px;
+}
+
+.header,
+.footer,
+.main-wrapper {
   max-width: 400px;
+  padding: 5px 15px;
+  color: #777;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  border-left: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+}
+
+.footer {
+  text-align: center;
+  display: none; /*  Temporary  */
   border-top: 1px solid #e0e0e0;
   margin: 30px auto 0;
-  padding: 15px;
-  color: #777;
-  text-transform: uppercase;
-  font-size: 11px;
+}
+
+.thumbnail {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.links {
+  padding: 10px 0;
   text-align: center;
+  border-top: 1px solid #e9e9e9;
 }

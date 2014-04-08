@@ -4,7 +4,7 @@ var forum_url = 'https://ethercalc.org/static/proxy/enews.json'
 
 $(document).ready(function() {
   $.getJSON(forum_url, function(data){
-    news = $.map(data.entry, function(entry){ return entry }).slice(0, 2)
+    news = $.map(data.entry, function(entry){ return entry }).slice(-3)
     $.each(news, function(_, news) {
       time = new Date(news.published)
       date_string = addZeros(time.getMonth() + 1) + '/' + addZeros(time.getDate())
